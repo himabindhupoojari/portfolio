@@ -1,0 +1,5 @@
+$backgroundColor: #ffffffb3;
+
+@mixin theme{
+    --bgColor: #{$backgroundColor};
+}

@@ -1,0 +1,44 @@
+// Token-based Theming with SCSS
+
+// --bgColor is considered a design token because:
+
+// It abstracts a design decision
+// Instead of hardcoding blue or yellow, you use a named value: --bgColor. This creates a separation between the value and its usage.
+
+// It’s reusable across components
+// Multiple components (like buttons, cards, tables) can use var(--bgColor), and changing the token value updates all of them.
+
+// It enables consistent theming
+// Tokens help you apply consistent styling across themes (light, dark, etc.) by changing only the value of the token, not every individual rule.
+
+
+// Tool	File	Purpose
+// ESLint	.eslintrc.cjs	Code linting
+// Prettier	.prettierrc	Formatting
+// TypeScript	tsconfig.json	Type-checking and aliases
+// Vite Alias	vite.config.ts	Import path aliases
+// Stylelint	.stylelintrc.json (optional)	SCSS order and linting
+
+@use './dark.scss' as dark;
+@use './light.scss' as light;
+// @use './_variables.scss';
+
+body.light {
+  @include light.theme;
+}
+
+body.dark {
+  @include dark.theme;
+}
+
+body, html{
+    font-size: 10px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;  
+    box-sizing: border-box;
+}
