@@ -19,9 +19,12 @@
 // Vite Alias	vite.config.ts	Import path aliases
 // Stylelint	.stylelintrc.json (optional)	SCSS order and linting
 
+// npm install --save-dev stylelint stylelint-order stylelint-scss to add style file order
+
+
 @use './dark.scss' as dark;
 @use './light.scss' as light;
-// @use './_variables.scss';
+@use './variables';
 
 body.light {
   @include light.theme;
@@ -31,14 +34,28 @@ body.dark {
   @include dark.theme;
 }
 
-body, html{
-    font-size: 10px;
+body,
+html {
+  font-size: 10px;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;  
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+button {
+  // background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
 }

@@ -1,1 +1,6 @@
-$backgroundOpacity: rgba(0, 0, 0, 0.5);
+$backgroundOpacity: rgb(0 0 0 / 50%);
+
+@mixin glassMorphismbg {    
+  background: var(--glassColor);    
+  backdrop-filter: blur(1px);
+}

@@ -1,5 +1,13 @@
-$backgroundColor: #000;
+// _dark.scss
+$backgroundColor: #fff;
+$themeButtonColor: #fff;
 
-@mixin theme{
-    --bgColor: #{$backgroundColor};
+// $glassColor: rgba(0, 0, 0, 0.5);
+
+@mixin theme {
+  --bg-color: #{$backgroundColor};
+  --theme-button: #{$themeButtonColor};
+
+  // --glass-color: #{$glassColor};
 }
+

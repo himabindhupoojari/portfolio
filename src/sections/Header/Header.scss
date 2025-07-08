@@ -1,0 +1,27 @@
+.header {
+    padding: 2rem 0;
+    
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__menu{
+        display: inline-flex;
+        font-size: 1.6rem;
+        column-gap: 2rem;        
+
+        a{                       
+            color: #000;
+            text-decoration: none;            
+
+            &:active{
+                color: #000;
+            }
+        }
+    }
+
+    &__theme-btn{
+        background-color: var(--theme-button);
+    }
+}

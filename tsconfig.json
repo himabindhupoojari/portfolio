@@ -1,7 +1,30 @@
 {
-  "files": [],
+  // "files": [],
+  "compilerOptions": {
+    "jsx": "react",
+    "esModuleInterop": true,
+    "baseUrl": "src",
+    "paths": {
+      "@images/*": [
+        "assets/images/*"
+      ],
+      "@styles/*": [
+        "assets/styles/*"
+      ],
+      "@sections/*": [
+        "sections/*"
+      ]
+    },
+    "types": [
+      "node"
+    ],
+  },
   "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    },
+  ],
 }
