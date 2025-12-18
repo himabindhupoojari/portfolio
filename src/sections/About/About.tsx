@@ -1,9 +1,9 @@
-import React from 'react'
+import './About.scss';
 
 function About() {
   return (
-    <div>
-      <p>About</p>
+    <div className='about'>
+      About
     </div>
   )
 }

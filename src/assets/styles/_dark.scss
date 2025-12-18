@@ -1,12 +1,20 @@
 // _dark.scss
-$backgroundColor: #fff;
-$themeButtonColor: #fff;
+$backgroundColor: #000;
+$buttonBgColor: #7369ff;
+$buttonColor: #fff;
+$textColorOne: #7369ff;
+$textColorTwo: #eee;
+$subHeadingColor: #fff;
 
 // $glassColor: rgba(0, 0, 0, 0.5);
 
 @mixin theme {
   --bg-color: #{$backgroundColor};
-  --theme-button: #{$themeButtonColor};
+  --button-bg-color: #{$buttonBgColor};      
+  --button-color: #{$buttonColor};
+  --text-color-one: #{$textColorOne};
+  --text-color-two: #{$textColorTwo};
+  --subheading-color: #{$subHeadingColor};
 
   // --glass-color: #{$glassColor};
 }

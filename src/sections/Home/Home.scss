@@ -1,2 +1,23 @@
-.home {    
+.home { 
+    
+
+    color: var(--subheading-color);
+    &__content{
+        h3{
+            color: var(--text-color-one);
+        }
+
+        h4{
+            color: var(--subheading-color);
+        }
+
+        h5{
+            color: var(--text-color-two);            
+        }
+
+        button{
+            background-color: var(--button-bg-color);
+            color: var(--button-color);
+        }
+    }   
 }

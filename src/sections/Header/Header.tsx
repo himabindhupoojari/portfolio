@@ -1,8 +1,22 @@
 import { useEffect, useState } from 'react'
 import './Header.scss';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { MdDarkMode, MdLightMode } from "react-icons/md"
 
 function Header() {
+    const arr = [
+        {
+            id: 0,
+            link: "/",
+            label: 'Home',
+        },
+        {
+            id: 1,
+            link: "about",
+            label: 'About',
+        }
+    ]
+
     const [theme, setTheme] = useState('dark');
 
     const handleTheme = () => {
@@ -18,10 +32,24 @@ function Header() {
         <div className='header'>
             <div className='container header__container'>
                 <div className='header__menu'>
-                    <Link to='/'>Home</Link>
-                    <Link to='/about'>About</Link>
+                    {arr.map((item) => {
+                        return (
+                            <NavLink to={item.link} key={item.id} className={({ isActive }) => (isActive ? "active-link" : "inactive-link")}>{item.label}</NavLink>
+                        )
+                    })}
                 </div>
-                <button className='header__theme-btn' onClick={handleTheme}>Change Theme</button>
+                <button className='header__theme-btn' onClick={handleTheme}>
+                    {theme === "light" ? (                    
+                        <>
+                         <MdDarkMode style={{ color: 'black' }} />                           
+                        </>
+                    ) : (
+                        <>
+                         <MdLightMode  />                            
+                        </>
+                    )}
+                </button>
+
             </div>
         </div>
     )
