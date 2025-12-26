@@ -14,6 +14,21 @@ function Header() {
             id: 1,
             link: "about",
             label: 'About',
+        },
+        // {
+        //     id: 2,
+        //     link: "experience",
+        //     label: 'Experience',
+        // },
+        {
+            id: 3,
+            link: "portfolio",
+            label: 'Portfolio',
+        },
+        {
+            id: 4,
+            link: "skills",
+            label: 'Skills',
         }
     ]
 

@@ -1,23 +1,147 @@
-.home { 
-    
+.home {
+    height: 100%;    
+    @include verticalCenterAlignment;
+    flex-direction: column;
+    row-gap: 2rem;
 
     color: var(--subheading-color);
-    &__content{
-        h3{
-            color: var(--text-color-one);
-        }
 
-        h4{
-            color: var(--subheading-color);
-        }
+    h1 {
+        color: var(--text-color-one);
+    }
 
-        h5{
-            color: var(--text-color-two);            
-        }
+    h2 {
+        color: var(--text-color-two);
+    }
 
-        button{
-            background-color: var(--button-bg-color);
-            color: var(--button-color);
+    p {
+        color: var(--text-color-two);
+    }
+
+    button {
+        background-color: var(--button-bg-color);
+        color: var(--button-color);
+    }
+
+    .typewriter{
+        color: var(--anchor-color);
+    }
+
+    .typewriter::before {
+        content: "";
+        animation: typing 5s infinite;
+    }
+
+    .typewriter::after {
+        content: "";
+        border-right: 2px solid currentColor;
+        margin-left: 2px;
+        animation: blink 0.7s infinite;
+    }
+
+    &__actions {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+
+        a {
+            width: fit-content;
+            color: var(--anchor-color);
+            text-decoration: none;
+            font-size: 1.8rem;
         }
-    }   
+    }
+
+}
+
+
+/* Typing animation */
+@keyframes typing {
+    0% {
+        content: "";
+    }
+
+    5% {
+        content: "H";
+    }
+
+    10% {
+        content: "Hi";
+    }
+
+    15% {
+        content: "Him";
+    }
+
+    20% {
+        content: "Hima";
+    }
+
+    25% {
+        content: "Hima ";
+    }
+
+    30% {
+        content: "Hima B";
+    }
+
+    35% {
+        content: "Hima Bi";
+    }
+
+    40% {
+        content: "Hima Bin";
+    }
+
+    45% {
+        content: "Hima Bindu";
+    }
+
+    50% {
+        content: "Hima Bindu ";
+    }
+
+    55% {
+        content: "Hima Bindu P";
+    }
+
+    60% {
+        content: "Hima Bindu Po";
+    }
+
+    65% {
+        content: "Hima Bindu Poo";
+    }
+
+    70% {
+        content: "Hima Bindu Pooj";
+    }
+
+    75% {
+        content: "Hima Bindu Pooja";
+    }
+
+    80% {
+        content: "Hima Bindu Poojar";
+    }
+
+    85% {
+        content: "Hima Bindu Poojari";
+    }
+
+    95% {
+        content: "Hima Bindu Poojari";
+    }
+
+    100% {
+        content: "";
+    }
+}
+
+
+/* Cursor blink */
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }

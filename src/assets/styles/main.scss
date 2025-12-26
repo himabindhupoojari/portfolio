@@ -24,7 +24,7 @@
 
 @use './dark.scss' as dark;
 @use './light.scss' as light;
-@use './variables';
+@use './variables.scss';
 
 body.light {
   @include light.theme;
@@ -46,6 +46,18 @@ html {
   border-radius: 0;
   box-sizing: border-box;
   outline: 0;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 1.8rem;
 }
 
 button {

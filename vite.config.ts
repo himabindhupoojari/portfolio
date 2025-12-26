@@ -22,7 +22,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-         additionalData: `@use 'sass:color'; @use "@styles/main.scss" as *;`,
+         additionalData: `@use 'sass:color'; @use "@styles/main.scss" as *; @use "@styles/variables.scss" as *;`,
       },
     },
   },

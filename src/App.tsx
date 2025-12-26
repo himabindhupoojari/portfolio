@@ -1,18 +1,25 @@
 import './App.scss';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from '@sections/Home/Home';
 import About from '@sections/About/About';
 import Header from '@sections/Header/Header';
+import Experience from '@sections/Experience/Experience';
+import Portfolio from '@sections/Portfolio/Portfolio';
+import Skills from '@sections/Skills/Skills';
 
 
 function App() {
+  const location = useLocation();
   return (
     <div className="app">
       <Header />
-      <div className='route-container'>
+      <div key={location.pathname}  className='route-container'>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
+        <Route path='/experience' element={<Experience />} />
+        <Route path='/portfolio' element={<Portfolio />} />
+        <Route path='/skills' element={<Skills />} />
       </Routes>
       </div>
     </div>

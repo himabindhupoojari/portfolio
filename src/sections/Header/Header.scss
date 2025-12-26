@@ -1,8 +1,14 @@
-.header {    
+.header {
+    // border: 1px solid green;
+    
+    background-color: var(--header-bg-color);
+    
     &__container {
+        padding: 3rem;
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         flex-direction: column;
+        row-gap: 2rem;
     }
 
     &__menu {
@@ -10,34 +16,41 @@
         // column-gap: 2rem;
 
         .active-link {
-            font-size: 1.6rem;
-            color: var(--text-color-one); 
-            display: block;           
-        }
-
-        .inactive-link{
+            font-size: 1.8rem;
+            color: var(--anchor-color);
             display: block;
+            font-weight: bold;
         }
 
-        a{   
-            font-size: 1.6rem;         
-            text-decoration: none;
-            color: var(--text-color-two);
-            text-decoration: none;            
+        .inactive-link {
+            display: block;
+            font-weight: normal;
+        }
 
-            &:hover{color: var(--text-color-one); 
+        a {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-decoration: none;
+            color: var(--text-color-one);
+            text-decoration: none;
+
+            &:hover {
+                color: var(--anchor-color);
 
             }
         }
     }
 
     &__theme-btn {
+        width: unset;
         padding: 20px 10px;
         border-radius: 10px;
-        background-color: var(--button-bg-color);
+        // background-color: var(--button-bg-color);
+        background-color: transparent;
         color: var(--button-color);
+        text-align: unset;
 
-        svg{
+        svg {
             vertical-align: middle;
         }
     }

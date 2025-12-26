@@ -1,10 +1,13 @@
 // _dark.scss
-$backgroundColor: #000;
-$buttonBgColor: #7369ff;
-$buttonColor: #fff;
-$textColorOne: #7369ff;
-$textColorTwo: #eee;
-$subHeadingColor: #fff;
+$backgroundColor: #191919;
+$headerBgColor: #171414;
+$routeContainerBgColor: #191919;
+$buttonBgColor: #55005c;
+$buttonColor: #55005c;
+$textColorOne: #fff;
+$textColorTwo: #989898;
+$anchorColor: #55005c;
+// $textColorthree: #f2f2f2;
 
 // $glassColor: rgba(0, 0, 0, 0.5);
 
@@ -14,8 +17,12 @@ $subHeadingColor: #fff;
   --button-color: #{$buttonColor};
   --text-color-one: #{$textColorOne};
   --text-color-two: #{$textColorTwo};
-  --subheading-color: #{$subHeadingColor};
+  --anchor-color: #{$anchorColor};
+  --route-bg-color: #{$routeContainerBgColor};
+  --header-bg-color: #{$headerBgColor};
+  // --text-color-three: #{$textColorthree};
 
   // --glass-color: #{$glassColor};
 }
 
+// #7369ff
